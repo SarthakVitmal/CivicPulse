@@ -38,19 +38,19 @@ export default function LoginPage() {
         }),
       })
 
+      const data = await response.json()
+
       if (response.ok) {
-        const data = await response.json()
-        // Store token in localStorage or cookie
+        // Store token in localStorage
         localStorage.setItem('token', data.token)
         alert("Login successful!")
         window.location.href = '/dashboard'
       } else {
-        const error = await response.json()
-        alert(error.message || "Login failed")
+        alert(data.message || data.details || "Login failed")
       }
     } catch (error) {
       console.error('Login error:', error)
-      alert("An error occurred during login")
+      alert(`An error occurred: ${error instanceof Error ? error.message : 'Unknown error'}`)
     } finally {
       setIsLoading(false)
     }
