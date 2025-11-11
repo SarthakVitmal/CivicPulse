@@ -3,8 +3,37 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Camera, CheckCircle, Zap, Users, TrendingUp } from "lucide-react"
+import { useState, useEffect } from "react"
+
+const heroImages = [
+  {
+    url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2000&auto=format&fit=crop",
+    alt: "India Gate Delhi"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?q=80&w=2000&auto=format&fit=crop",
+    alt: "Mumbai city streets"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=2000&auto=format&fit=crop",
+    alt: "Bangalore infrastructure"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=2000&auto=format&fit=crop",
+    alt: "Indian city development"
+  }
+]
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length)
+    }, 5000) // Change image every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [])
   return (
     <div className="w-full bg-background">
       {/* Navigation */}
@@ -21,10 +50,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" className="text-gray-700 hover:text-blue-600">
+              <Button variant="default" size="sm" className="text-gray-700 hover:text-blue-600 cursor-pointer">
                 Login
               </Button>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-md cursor-pointer">
                 Get Started
               </Button>
             </div>
@@ -34,14 +63,35 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:py-32 lg:py-40">
-        {/* Background Image with Overlay */}
+        {/* Background Image Slideshow with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/80 z-10"></div>
-          <img 
-            src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2000&auto=format&fit=crop" 
-            alt="City streets background"
-            className="h-full w-full object-cover"
-          />
+          {heroImages.map((image, index) => (
+            <img 
+              key={index}
+              src={image.url}
+              alt={image.alt}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ))}
+        </div>
+        
+        {/* Slideshow Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`h-2 rounded-full transition-all ${
+                index === currentImageIndex 
+                  ? 'w-8 bg-white' 
+                  : 'w-2 bg-white/50 hover:bg-white/75'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
         
         <div className="mx-auto max-w-4xl relative z-20">
@@ -57,7 +107,7 @@ export default function Home() {
               authorities and watch issues get fixed.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-xl">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-xl cursor-pointer">
                 Start Reporting Now
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
