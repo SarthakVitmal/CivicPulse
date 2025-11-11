@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Camera, CheckCircle, Zap, Users, TrendingUp } from "lucide-react"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 const heroImages = [
   {
@@ -50,11 +51,11 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="default" size="sm" className="text-gray-700 hover:text-blue-600 cursor-pointer">
-                Login
+              <Button variant="ghost" size="sm" className="text-gray-700 hover:text-blue-600">
+                <Link href="/login">Login</Link>
               </Button>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-md cursor-pointer">
-                Get Started
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+                <Link href="/signup">Get Started</Link>
               </Button>
             </div>
           </div>
@@ -67,33 +68,31 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/80 z-10"></div>
           {heroImages.map((image, index) => (
-            <img 
+            <img
               key={index}
               src={image.url}
               alt={image.alt}
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                }`}
             />
           ))}
         </div>
-        
+
         {/* Slideshow Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-2">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`h-2 rounded-full transition-all ${
-                index === currentImageIndex 
-                  ? 'w-8 bg-white' 
+              className={`h-2 rounded-full transition-all ${index === currentImageIndex
+                  ? 'w-8 bg-white'
                   : 'w-2 bg-white/50 hover:bg-white/75'
-              }`}
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
-        
+
         <div className="mx-auto max-w-4xl relative z-20">
           <div className="text-center">
             <div className="mb-6 inline-block rounded-full bg-blue-600/90 backdrop-blur-sm px-4 py-2 shadow-lg">
@@ -114,7 +113,7 @@ export default function Home() {
                 Watch Demo
               </Button>
             </div>
-            
+
             {/* Trust Indicators */}
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-white/90">
               <div className="flex items-center gap-2">
@@ -193,13 +192,13 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/95 to-indigo-900/95 z-10"></div>
-          <img 
-            src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2000&auto=format&fit=crop" 
+          <img
+            src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2000&auto=format&fit=crop"
             alt="City skyline"
             className="h-full w-full object-cover"
           />
         </div>
-        
+
         <div className="mx-auto max-w-6xl relative z-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Making Real Impact</h2>
@@ -276,13 +275,13 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/90 to-indigo-900/90 z-10"></div>
-          <img 
-            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop" 
+          <img
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop"
             alt="Community together"
             className="h-full w-full object-cover"
           />
         </div>
-        
+
         <div className="mx-auto max-w-4xl text-center relative z-20">
           <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl drop-shadow-lg">Ready to Make a Difference?</h2>
           <p className="mb-8 text-lg text-blue-100 drop-shadow-md">
