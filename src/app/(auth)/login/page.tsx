@@ -41,8 +41,9 @@ export default function LoginPage() {
       const data = await response.json()
 
       if (response.ok) {
-        // Store token in localStorage
+        // Store token and user data in localStorage
         localStorage.setItem('token', data.token)
+        localStorage.setItem('user', JSON.stringify(data.user))
         alert("Login successful!")
         window.location.href = '/dashboard'
       } else {
