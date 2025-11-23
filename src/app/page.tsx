@@ -51,7 +51,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" className="text-gray-700 hover:text-green-600">
+              <Button variant="ghost" size="sm" className="text-gray-700 ">
                 <Link href="/login">Login</Link>
               </Button>
               <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white shadow-md">
@@ -96,7 +96,7 @@ export default function Home() {
         <div className="mx-auto max-w-4xl relative z-20">
           <div className="text-center">
             <div className="mb-6 inline-block rounded-full bg-green-600/90 backdrop-blur-sm px-4 py-2 shadow-lg">
-              <span className="text-sm font-medium text-white">🏛️ Official Government Service</span>
+              <span className="text-sm font-medium text-white">🏛️ Official Service</span>
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-lg">
               Report Local Issues. Create Real Change.
@@ -119,10 +119,6 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-400" />
                 <span className="text-sm font-medium">Secure & Encrypted</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="text-sm font-medium">Government Verified</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-400" />
