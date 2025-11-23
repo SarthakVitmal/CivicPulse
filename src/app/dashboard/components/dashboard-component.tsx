@@ -115,7 +115,7 @@ export default function DashboardComponent() {
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary/20 border-t-primary mx-auto"></div>
-          <p className="mt-4 text-muted-foreground font-medium">{t("loadingDashboard")}</p>
+          <p className="mt-4 text-muted-foreground font-medium">{t("Loading Dashboard")}</p>
         </div>
       </div>
     )
@@ -180,9 +180,9 @@ export default function DashboardComponent() {
             className="w-full px-3 py-2 border border-border rounded-lg text-sm font-medium focus:ring-2 focus:ring-primary focus:border-transparent bg-background hover:bg-muted transition-colors mb-3"
             aria-label="Select Language"
           >
-            <option value="en">🌐 English</option>
-            <option value="hi">🌐 हिंदी</option>
             <option value="mr">🌐 मराठी</option>
+            <option value="hi">🌐 हिंदी</option>
+            <option value="en">🌐 English</option>
           </select>
           <Button
             onClick={handleLogout}
