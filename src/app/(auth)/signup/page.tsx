@@ -134,10 +134,10 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Back to Home Link */}
-        <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 transition-colors">
+        <Link href="/" className="inline-flex items-center text-green-600 hover:text-green-800 mb-6 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Home
         </Link>
@@ -145,7 +145,7 @@ export default function SignupPage() {
         <Card className="shadow-xl border-0">
           <CardHeader className="text-center pb-2">
             <div className="flex justify-center mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-600 to-green-700 shadow-lg">
                 <MapPin className="h-7 w-7 text-white" />
               </div>
             </div>
@@ -235,9 +235,9 @@ export default function SignupPage() {
                     title="Get current location"
                   >
                     {locationLoading ? (
-                      <div className="animate-spin h-4 w-4 border-2 border-blue-600 border-t-transparent rounded-full"></div>
+                      <div className="animate-spin h-4 w-4 border-2 border-green-600 border-t-transparent rounded-full"></div>
                     ) : (
-                      <MapPin className="h-4 w-4 text-blue-600" />
+                      <MapPin className="h-4 w-4 text-green-600" />
                     )}
                   </Button>
                 </div>
@@ -285,7 +285,7 @@ export default function SignupPage() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+                className="w-full h-11 bg-green-600 hover:bg-green-700 text-white font-semibold"
                 disabled={isLoading}
               >
                 {isLoading ? "Creating Account..." : "Create Account"}
@@ -296,7 +296,7 @@ export default function SignupPage() {
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Already have an account?{" "}
-                <Link href="/login" className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/login" className="text-green-600 hover:text-green-800 font-medium">
                   Sign in here
                 </Link>
               </p>
@@ -306,11 +306,11 @@ export default function SignupPage() {
             <div className="mt-4 text-center">
               <p className="text-xs text-gray-500">
                 By creating an account, you agree to our{" "}
-                <Link href="/terms" className="text-blue-600 hover:text-blue-800">
+                <Link href="/terms" className="text-green-600 hover:text-green-800">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="text-blue-600 hover:text-blue-800">
+                <Link href="/privacy" className="text-green-600 hover:text-green-800">
                   Privacy Policy
                 </Link>
               </p>

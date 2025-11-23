@@ -42,7 +42,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 shadow-md">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-green-600 to-green-700 shadow-md">
                 <MapPin className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -51,10 +51,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" className="text-gray-700 hover:text-blue-600">
+              <Button variant="ghost" size="sm" className="text-gray-700 hover:text-green-600">
                 <Link href="/login">Login</Link>
               </Button>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white shadow-md">
                 <Link href="/signup">Get Started</Link>
               </Button>
             </div>
@@ -95,7 +95,7 @@ export default function Home() {
 
         <div className="mx-auto max-w-4xl relative z-20">
           <div className="text-center">
-            <div className="mb-6 inline-block rounded-full bg-blue-600/90 backdrop-blur-sm px-4 py-2 shadow-lg">
+            <div className="mb-6 inline-block rounded-full bg-green-600/90 backdrop-blur-sm px-4 py-2 shadow-lg">
               <span className="text-sm font-medium text-white">🏛️ Official Government Service</span>
             </div>
             <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-lg">
@@ -106,7 +106,7 @@ export default function Home() {
               authorities and watch issues get fixed.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-xl cursor-pointer">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white shadow-xl cursor-pointer">
                 Start Reporting Now
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
@@ -144,10 +144,10 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-3">
             {/* Feature 1 */}
             <div className="flex flex-col bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-100">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 shadow-lg">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-green-600 shadow-lg">
                 <Camera className="h-7 w-7 text-white" />
               </div>
-              <div className="mb-3 inline-flex items-center justify-center rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 w-fit">
+              <div className="mb-3 inline-flex items-center justify-center rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700 w-fit">
                 Step 1
               </div>
               <h3 className="mb-2 text-xl font-bold text-foreground">Snap & Upload</h3>
@@ -191,7 +191,7 @@ export default function Home() {
       <section className="relative border-t border-border/40 px-4 py-16 sm:py-24 lg:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/95 to-indigo-900/95 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/95 via-green-800/95 to-emerald-900/95 z-10"></div>
           <img
             src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2000&auto=format&fit=crop"
             alt="City skyline"
@@ -202,20 +202,20 @@ export default function Home() {
         <div className="mx-auto max-w-6xl relative z-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Making Real Impact</h2>
-            <p className="text-blue-100 text-lg">Join thousands of citizens creating positive change</p>
+            <p className="text-green-100 text-lg">Join thousands of citizens creating positive change</p>
           </div>
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl">
               <div className="mb-2 text-4xl font-bold text-white sm:text-5xl drop-shadow-lg">1,247</div>
-              <p className="text-blue-100 font-medium">Issues Reported</p>
+              <p className="text-green-100 font-medium">Issues Reported</p>
             </div>
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl">
               <div className="mb-2 text-4xl font-bold text-white sm:text-5xl drop-shadow-lg">892</div>
-              <p className="text-blue-100 font-medium">Issues Resolved</p>
+              <p className="text-green-100 font-medium">Issues Resolved</p>
             </div>
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl">
               <div className="mb-2 text-4xl font-bold text-white sm:text-5xl drop-shadow-lg">15K+</div>
-              <p className="text-blue-100 font-medium">Active Citizens</p>
+              <p className="text-green-100 font-medium">Active Citizens</p>
             </div>
           </div>
         </div>
@@ -231,9 +231,9 @@ export default function Home() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Benefit 1 */}
-            <Card className="border-2 border-blue-100 bg-gradient-to-br from-blue-50 to-white shadow-lg hover:shadow-xl transition-all">
+            <Card className="border-2 border-green-100 bg-gradient-to-br from-green-50 to-white shadow-lg hover:shadow-xl transition-all">
               <CardContent className="pt-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-600 to-green-700 shadow-lg">
                   <Zap className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-foreground">Lightning Fast</h3>
@@ -274,7 +274,7 @@ export default function Home() {
       <section className="relative border-t border-border/40 px-4 py-16 sm:py-24 lg:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/90 to-indigo-900/90 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-green-900/90 to-emerald-900/90 z-10"></div>
           <img
             src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop"
             alt="Community together"
@@ -284,10 +284,10 @@ export default function Home() {
 
         <div className="mx-auto max-w-4xl text-center relative z-20">
           <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl drop-shadow-lg">Ready to Make a Difference?</h2>
-          <p className="mb-8 text-lg text-blue-100 drop-shadow-md">
+          <p className="mb-8 text-lg text-green-100 drop-shadow-md">
             Join thousands of citizens improving their neighborhoods, one report at a time.
           </p>
-          <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 shadow-2xl font-bold">
+          <Button size="lg" className="bg-white text-green-900 hover:bg-gray-100 shadow-2xl font-bold">
             Start Reporting Today →
           </Button>
         </div>

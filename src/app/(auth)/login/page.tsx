@@ -58,10 +58,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Back to Home Link */}
-        <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 transition-colors">
+        <Link href="/" className="inline-flex items-center text-green-600 hover:text-green-800 mb-6 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Home
         </Link>
@@ -69,7 +69,7 @@ export default function LoginPage() {
         <Card className="shadow-xl border-0">
           <CardHeader className="text-center pb-2">
             <div className="flex justify-center mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-600 to-green-700 shadow-lg">
                 <MapPin className="h-7 w-7 text-white" />
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function LoginPage() {
 
               {/* Forgot Password Link */}
               <div className="flex justify-end">
-                <Link href="/forgot-password" className="text-sm text-blue-600 hover:text-blue-800">
+                <Link href="/forgot-password" className="text-sm text-green-600 hover:text-green-800">
                   Forgot password?
                 </Link>
               </div>
@@ -127,7 +127,7 @@ export default function LoginPage() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+                className="w-full h-11 bg-green-600 hover:bg-green-700 text-white font-semibold"
                 disabled={isLoading}
               >
                 {isLoading ? "Signing In..." : "Sign In"}
@@ -168,7 +168,7 @@ export default function LoginPage() {
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Don't have an account?{" "}
-                <Link href="/signup" className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/signup" className="text-green-600 hover:text-green-800 font-medium">
                   Sign up here
                 </Link>
               </p>
